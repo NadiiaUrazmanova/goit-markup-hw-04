@@ -48,7 +48,10 @@ address {
 
 .header-nav {
     display: flex;
-    align-items: center;         
+    align-items: center;
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-nav-list {
@@ -100,6 +103,9 @@ address {
 }
 .header-address-item {
     color: #434455;
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-address-item:hover {
     color: #404bbf;
@@ -114,10 +120,16 @@ address {
 }
 
 .solutions {
+    background-image: linear-gradient(
+        to top,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg);
     background-color: #2E2F42;
+    background-repeat: no-repeat;
+    background-size: 1440px 100%;
     padding-top: 188px;
     padding-bottom: 188px;
-
 }
 .solution-header {
     font-size: 56px;
@@ -146,6 +158,10 @@ address {
     margin-right: auto;
     border: none;
     border-radius: 4px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .solution-button:hover {
     background-color: #404bbf;
@@ -215,12 +231,14 @@ address {
 .team-item {
     background-color: #FFFFFF;
     width: 264px;
-    height: 380px;
     border-radius: 0 0 4px 4px;
-    }
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 1px 1px 0 rgba(46, 47, 66, 0.16);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+        }
 
 .team-item-caption{
-    padding: 32px 0;
+    padding: 32px 16px;
 }
 
 
@@ -240,8 +258,34 @@ address {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    width: 264px;
-    text-align: center;    
+    text-align: center;
+    margin-bottom: 8px;    
+}
+
+.team-icon-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;    
+}
+
+.team-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    fill: none;
+    background-color: #4D5AE5;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.team-icon:hover {
+    background-color: #404BBF;
+}
+
+.team-icon:focus {
+    background-color: #404BBF;
 }
 
 .section-3-name {
@@ -271,8 +315,47 @@ address {
 }
 
 .portfolio-item {
+    position:relative
+    overflow: hidden;
     width: 360px;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.overlay {
+    text-transform: capitalize;
+    background-color: #4D5AE5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .overlay {
+    transform: translateY(-100%);
+}
+
+.portfolio-item:focus .overlay {
+    transform: translateY(-100%);
+}
+
+.portfolio-item:hover .portfolio-item-caption {
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 1px 1px 0 rgba(46, 47, 66, 0.16);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+.portfolio-item:focus .portfolio-item-caption {
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0 1px 1px 0 rgba(46, 47, 66, 0.16);
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+}
+
+
+
 
 .portfolio-item-caption {
     border-right: 1px solid #E7E9FC;
@@ -307,6 +390,11 @@ address {
     padding-bottom: 100px;
 }
 
+.footer-container {
+    display: flex;
+    gap: 120px;
+}
+
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -331,4 +419,37 @@ address {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     width: 264px;
+}
+
+.footer-social-media {
+    width: 208px;
+}
+
+
+.footer-social-media-list {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    fill: none;
+    background-color: #4D5AE5;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-media-text {
+    color: white;
+    margin-bottom: 16px;
+}
+.footer-icon:hover {
+    background-color: #31D0AA;
+}
+
+.footer-icon:focus {
+    background-color: #31D0AA;
 }

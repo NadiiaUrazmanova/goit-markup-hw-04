@@ -139,6 +139,7 @@ background-color: #404bbf;
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
+    margin: 0 auto;
 }
 
 .solutions {
@@ -445,7 +446,6 @@ background-color: #404bbf;
 
 .footer-container {
     display: flex;
-    gap: 120px;
     align-items: baseline;
 }
 
